@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<button id="start">Start slide</button>
+<button id="stop">Stop slide</button><br><br><br><br>
+<div id="images" border="1"></div>
+<script>
+$(document).ready(function(){
+var interval;
+$('#start').on("click",function()
+{
+var i=0;
+var arr = new Array("https://picsum.photos/536/354", "https://picsum.photos/536/355",
+"https://picsum.photos/536/356","https://picsum.photos/536/357");
+interval =setInterval(function()
+{$('#images').html('<img src="'+arr[i]+'" height="500px" width="500px"/>');
+i++;
+if(i==4)
+i=0;
+}, 2000);
+});
+$('#stop').on("click",function()
+{
+clearInterval(interval);
+});
+});
+</script>
+</body>
+</html>

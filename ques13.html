@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+ </head>
+  <body>
+<div>
+    <div class="a">
+      Line number 1<br/>
+      Line number 2
+    </div>
+    <div class="a">
+      Line number 1<br/>
+      Line number 2<br/>
+      Line number 3<br/>
+      Line number 4<br/>
+      Line number 5<br/>
+      Line number 6<br/>
+      Line number 7
+    </div>
+    <div class="a">
+      Line number 1
+    </div>
+    <div class="a">
+      Line number 1<br/>
+      Line number 2
+    </div>
+</div>
+</body>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+var highest = null;
+var hi = 0;
+$(".a").each(function(){
+  var h = $(this).height();
+  if(h > hi){
+     hi = h;
+     highest = $(this);  
+  }    
+});
+highest.css("background-color", "red");
+</script>
+</html>

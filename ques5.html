@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>jQuery - Change the font size </h3>
+ 
+<button id="btn1">Click
+</button>
+<div id="div1" class="mydiv">
+<p id="main" class="target" value="hw">
+This is first <b>paragraph</b>
+</p>
+</div>
+ </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script >
+	$(document).ready(function () {
+ 
+        $("#btn1").click(function () {
+            alert($('#main').css("font-size", '+=20px'));
+            
+        });
+    });
+</script>
+</html>

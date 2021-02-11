@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+.dropdown{
+display: none;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ 
+</head>
+<body>
+ 	<h2>JQuery</h2><br><br>
+ 	<div class="wrapper">
+<div class="button">
+<button value="Hover on me!" id="hover">Hover On Me!
+</button>
+</div>
+<div class="dropdown">
+<ul>
+<li><a href="#">C++</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">JavaScript Page</a></li>
+<li><a href="#">HTML Page</a></li>
+<li><a href="#">CSS Page</a></li>
+</ul>
+</div>
+</div>
+ </body>
+<script>
+$(document).ready(function(){
+$(".button").hover(function(){
+$(".dropdown").slideToggle();
+});
+});
+</script>
+ 
+</html>

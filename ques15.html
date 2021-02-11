@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+<body>
+<button id="btn">Click</button>
+<div>
+<p id="result">
+</div>
+<script>
+	$(document).ready(function(){
+		$("#btn").click(function(){
+		$.ajax({url: "https://jsonplaceholder.typicode.com/posts", success: function(result){
+			console.log(result);
+			$("#result").html(JSON.stringify(result));}});
+		});
+	});
+</script>
+</body>
+</html>

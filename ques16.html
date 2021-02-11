@@ -1,0 +1,38 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<button id="btn">Click</button>
+<div class="data">
+</div>
+<script>
+$(document).ready(function(){
+$(document).on('click','.del',function(e){
+let id =$(this).attr('name')
+$.ajax({
+url: 'https://jsonplaceholder.typicode.com/posts/'+id,
+type: 'DELETE',
+success: function(result) {
+alert("successfully deleted")
+$('div#'+id).remove();
+}
+});
+});
+$("#btn").click(function(){
+$.ajax({
+url: 'https://jsonplaceholder.typicode.com/posts/',
+success: function(result) {
+for(var i in result)
+{
+$('.data').append(
+'<div id='+result[i].id+'> <span id='+result[i].id+'>'+result[i].title+'</span> <button class="del" name='+result[i].id+'>X</button></div>'
+);
+}
+}
+});
+});
+});
+</script>
+</body>
+</html>

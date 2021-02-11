@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+  <body>
+ <div class="header">
+    <a href="https://www.google.com/">parent link</a>
+    <ul class="children">
+        <li>click child list</li>
+    </ul>
+</div>
+ </body>
+<script>
+$(document).ready(function(){
+    $(".header").click(function(){
+        $(this).children(".children").toggle();
+    });
+   $(".header a").click(function(e) {
+        e.stopPropagation();
+   });
+});
+</script>
+</html>

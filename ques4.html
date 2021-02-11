@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+<h2>jQuery - How to disabled submit button after clicked</h2>
+
+<form id="formABC" action="#" method="POST">
+    <input type="submit" id="btnSubmit" value="Submit"></input>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        $("#formABC").submit(function (e) {
+            e.preventDefault();
+
+            $("#btnSubmit").attr("disabled", true);
+
+            return true;
+
+        });
+    });
+</script>
+
+</body>
+</html>

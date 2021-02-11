@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>bind demo</title>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+    <a id="load_list" href="#">Load the list</a>
+
+    <ul></ul>
+</body>
+<script>
+    $('#load_list').click(function() {
+        $('ul').append('<li><a href="#">Click here</a></li>');
+        return false;
+    });
+    $('ul').delegate('a','click',function() {
+        alert("Thank you for clicking");
+        return false;
+    });
+</script>
+</html>
