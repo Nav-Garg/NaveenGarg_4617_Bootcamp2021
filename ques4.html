@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+/*
+//1) Object.assign({}, sourceObj);
+
+    var sourceObj = {
+    age :1,
+    gender: 'male',
+    hobbies: ['cricket', 'carrom', 'chess']
+}
+
+var copiedObj = Object.assign({}, sourceObj);
+copiedObj.age = '100';
+copiedObj.hobbies[0] = 'Coding';
+console.log(copiedObj, sourceObj)
+*/
+
+
+/*
+//2) Spread operator{...Obj}
+var sourceObj1 = {
+    age :1,
+    gender: 'male',
+    hobbies: ['cricket', 'carrom', 'chess']
+}
+
+var spreadObj = {...sourceObj1};
+spreadObj.age = '100';
+spreadObj.hobbies[0] = 'dancing';
+console.log(spreadObj, sourceObj1)
+*/
+
+//3)JSON.parse(JSON.sringify(Array1));
+var sourceObj2 = {
+    age :1,
+    gender: 'male',
+    hobbies: ['cricket', 'carrom', 'chess']
+}
+
+var parseObj = JSON.parse(JSON.stringify(sourceObj2))
+parseObj.age = '100';
+parseObj.hobbies[0] = 'Singing';
+console.log(parseObj, sourceObj2)
+
+
+</script>
+</body>
+</html>

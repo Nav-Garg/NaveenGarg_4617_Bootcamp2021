@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> </title>
+	
+	<script type="text/javascript" >
+	
+	var list = [
+    { Name: 'Naveen', Age: 24, Salary: 15000, DOB: '05/5/1996' },
+    { Name: 'Mohit', Age: 29, Salary: 25000, DOB: '05/5/1990'},
+    { Name: 'Dev', Age: 18, Salary: 800, DOB: '15/10/2000' },
+    { Name: 'Raj', Age: 19, Salary: 900, DOB: '25/1/2001' },
+    { Name: 'Priyanka',Age:31, Salary: 40900, DOB: '22/2/1985' },
+    { Name: 'Rahul', Age: 22, Salary: 700, DOB: '5/9/1996' },
+    { Name: 'Lokesh', Age:41, Salary: 600, DOB: '22/6/1980' },
+    { Name: 'Anamika', Age: 36, Salary: 22900, DOB: '25/1/1985' },
+    { Name: 'Ankit', Age: 25, Salary: 23900, DOB: '17/12/1996' }
+];
+
+    var value = prompt("Menu:\n Press 1 for List of Employees \n Press 2 for All employees with salary greater than 5000 \nPress 3 for Group employee on the basis of their age \nPress 4 for Fetch employees with salary less than 1000 and age greater than 20. Then give them an increment 5 times their salary")
+	//document.write("List of all employees <br>");
+
+	switch(value) {
+  
+  		case '1':
+  			document.write("List of Employees<br><br>");
+  			for(var a=0; a<list.length; a++)
+			{
+				document.write("Name: " + list[a].Name + "<br>" + "Age: " + list[a].Age + "<br>" + "Salary: " + list[a].Salary + "<br>" + "DOB: " + list[a].DOB + "<br>");
+				document.write("<br>");
+			}
+    		break;
+  
+  		case '2':
+    		document.write("All employees with salary greater than 5000 <br><br>");
+			document.write("&nbsp &nbsp Employees Name<br>");
+			for(var a=0; a<list.length; a++)
+			{
+				if(list[a].Salary > 5000)
+					document.write("&nbsp &nbsp &nbsp &nbsp &nbsp "+list[a].Name + "<br>");
+			}
+    		break;
+    
+    	case '3':
+    		document.write("Group employee on the basis of their age<br>");
+			document.write("Employees name whose age less than 20 year:<br>");
+			for(var a=0; a<list.length; a++)
+			{
+				if(list[a].Age < 20)
+					document.write("&nbsp &nbsp &nbsp &nbsp &nbsp "+list[a].Name + "<br>");
+			}
+			document.write("Employees name whose age between 20 to 29: <br>");
+			for(var a=0; a<list.length; a++)
+			{
+				if(list[a].Age >= 20 && list[a].Age <30)
+					document.write("&nbsp &nbsp &nbsp &nbsp &nbsp "+list[a].Name + "<br>");
+			}
+
+			document.write("Employees name whose age greater than and equal 30: <br>");
+			for(var a=0; a<list.length; a++)
+			{
+				if(list[a].Age >= 30)
+					document.write("&nbsp &nbsp &nbsp &nbsp &nbsp "+list[a].Name + "<br>");
+			}
+			break;
+
+    	case '4':
+    		document.write("fetch employees with salary less than 1000 and age greater than 20. Then give them an increment 5 times their salary.<br>");
+			for(var a=0; a<list.length; a++)
+			{
+				if(list[a].Age > 20 && list[a].Salary < 1000)
+				{
+					list[a].Salary = 5*list[a].Salary;
+					document.write("Name: " + list[a].Name + "<br>" +  "Salary: " + list[a].Salary + "<br>");
+					document.write("<br>");
+				}	
+			}
+  			break;
+
+  		default:
+  			document.write("Your enter wrong value...");
+    
+}
+</script>
+</head>
+<body>
+
+</body>
+<script ></script>
+</html>
