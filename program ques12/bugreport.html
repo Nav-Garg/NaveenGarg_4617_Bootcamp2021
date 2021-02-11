@@ -1,0 +1,69 @@
+<!doctype>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Bug Report</title>
+		<link rel="stylesheet" type="text/css" href="bug.css">
+	</head>
+	<body>
+		<header>
+			<h1>TO THE NEW</h1>
+			<ul>
+				<li>Home</li>
+				<li>Quick Help</li>
+			</ul>
+		</header>
+		<hr>
+		<article>
+			<h2>Bug Report</h2>
+			<form>
+				<label for="title">Title:*</label><br>
+				<input type="text" id="title" name="title"><br>
+
+				<label for="description">Description:*</label><br>
+				<textarea name="description" rows="7" cols="30"></textarea><br>
+
+				<label for="opsystem">Operating system:</label><br>
+				<select id="opsystem" name="opsystem">
+					<option value="wxp">Windows XP</option>
+					<option value="mac">Apple Mac</option>
+					<option value="linux">Linux</option>
+				</select><br>
+
+				<label for="product">Product:*</label><br>
+				<select id="product" name="product">
+					<option value="formoid">Formoid</option>
+				</select><br>
+
+				<label for="version">Version:*</label><br>
+				<input type="text" name="version" id="version"><br>
+
+				<label for="license" >License:</label><br>
+				<input type="radio" class="free" name="license" id="free" value="free">
+				<label for="free" class="license">Free</label>
+				<input type="radio" id="business" class="license" name="license" value="business">
+				<label for="business" class="license">Bussiness</label><br>
+
+				<label for="severity">Severity:</label><br>
+				<select id="severity" name="severity">
+					<option value="critical">Critical</option>
+					<option value="casual">Casual</option>
+				</select><br>
+
+				<label for="attachments">Attachments:</label><br>
+				
+				<div class="container">
+  					<div class="button-wrap">
+    					<label class ="new-button" for="upload"> Choose file</label>
+    					<input id="upload" type="file" >
+  					</div>
+ 				</div>
+				
+
+				<div id="submit">
+				<input type="submit" id="send" value="Send">
+				</div>
+			</form>
+		</article>
+	</body>
+</html>
