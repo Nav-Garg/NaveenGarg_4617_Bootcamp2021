@@ -1,0 +1,9 @@
+https://www.sqlshack.com/how-to-backup-and-restore-mysql-databases-using-the-mysqldump-command/
+
+https://beginnersbook.com/2015/05/normalization-in-dbms/
+
+https://www.edureka.co/blog/sql-joins-types
+
+https://www.sqlshack.com/what-is-the-difference-between-clustered-and-non-clustered-indexes-in-sql-server/
+
+https://jsonplaceholder.typicode.com/
