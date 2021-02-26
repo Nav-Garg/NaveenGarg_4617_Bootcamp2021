@@ -13,15 +13,14 @@ class OrderTest {
 
     @Test
     void testSetQuantity() {
-        int expected = 2;
-        assertTrue(order.getQuantity() == expected );
+        Order returnObj = order.setQuantity(2);
+        assertEquals(returnObj, order);
     }
 
     @Test
     void testSetItemName() {
-        String expected = "Pen";
-        String actual = order.getItemName();
-        assertEquals(expected, actual);
+        Order returnObj = order.setItemName("Pen");
+        assertEquals(returnObj, order);
     }
 
     @Test
@@ -40,10 +39,10 @@ class OrderTest {
 
     @Test
     void testSetPrice() {
-        Double expected = 300.5;
-        Double actual = order.getPrice();
-        assertNotEquals(expected, actual);
+        Order returnObj = order.setPrice(200.5);
+        assertEquals(returnObj, order);
     }
+
 
     @Test
     void testGetPriceWithTex() {
@@ -58,5 +57,4 @@ class OrderTest {
         Double actual = 300.75;
         assertTrue(expected.equals(actual));
     }
-
 }
